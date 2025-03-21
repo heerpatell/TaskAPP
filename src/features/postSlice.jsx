@@ -29,6 +29,7 @@ export const addPost = createAsyncThunk(
 
     const data = await response.json();
 
+    //api always return id as 252, thats why overriding it with newPost.id
     const finalPost = {
       ...data,
       id: newPost.id,
