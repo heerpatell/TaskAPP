@@ -24,7 +24,6 @@
 |---------------------|--------------------------------------|
 | **React.js + Vite** | Frontend framework & fast project setup |
 | **Redux Toolkit**   | Global state management             |
-| **Axios**          | API handling                        |
 | **Bootstrap**      | UI styling                          |
 | **DummyJSON API**   | Backend for fetching & adding posts |
 
@@ -89,7 +88,7 @@ Now, all post-related state is available in ```state.posts```.
 
 The state starts as:
 ```sh
-{ posts: [], status: 'idle', currentPage: 1, totalPosts: 0 }
+{ posts: [], status: 'idle', totalPosts: 0, error: null }
 ```
 
 ```posts``` is an empty array until data is fetched.
@@ -183,5 +182,3 @@ setTags("");
 setLikes("");
 setDislikes("");
 ```
-
-
