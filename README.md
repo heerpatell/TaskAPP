@@ -141,8 +141,6 @@ The user enters post details (title, tags, likes, dislikes) and submits the form
 
 The API does not provide unique user IDs, and at the time of making post request userId is required (checked it through PostMan), so handling it manually. 
 
-Also, got to know from postman that, on every post request, it adds id as 252, so assigning it manually. 
-
 ```
 const maxId = Math.max(...posts.map((post) => post.id)) ;
 const newId = maxId + 1; 
@@ -150,6 +148,9 @@ const newId = maxId + 1;
 const minUserId = Math.min(...posts.map((post) => post.userId));
 const newUserId = Math.max(minUserId - 1, 1); 
 ```
+
+Also, got to know from postman that, on every post request, it adds id as 252, so to get unique id - assigning it manually in ```addPost```. 
+
 
 ### **3. Creating a New Post Object**
 Before sending it to Redux, I prepare the post data:
